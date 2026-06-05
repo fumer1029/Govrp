@@ -25,7 +25,7 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Made with ❤️",
+        name: "",
         // Activity type number (0 = Playing).
         type: 0, 
       },
@@ -209,27 +209,27 @@ export const botConfig = {
     // Priority options users/staff can assign.
     priorities: {
       none: {
-        emoji: "⚪",
+        emoji: "",
         color: "#95A5A6",
         label: "None",
       },
       low: {
-        emoji: "🟢",
+        emoji: "",
         color: "#2ECC71",
         label: "Low",
       },
       medium: {
-        emoji: "🟡",
+        emoji: "",
         color: "#F1C40F",
         label: "Medium",
       },
       high: {
-        emoji: "🔴",
+        emoji: "",
         color: "#E74C3C",
         label: "High",
       },
       urgent: {
-        emoji: "🚨",
+        emoji: "",
         color: "#E91E63",
         label: "Urgent",
       },
@@ -391,25 +391,25 @@ export const botConfig = {
     },
     messages: {
       // Default response messages for counter actions.
-      created: "✅ Created counter **{name}**",
-      deleted: "🗑️ Deleted counter **{name}**",
-      updated: "🔄 Updated counter **{name}**",
+      created: " Created counter **{name}**",
+      deleted: " Deleted counter **{name}**",
+      updated: " Updated counter **{name}**",
     },
     types: {
       // Built-in counter types and how each count is calculated.
       members: {
-        name: "👥 Members",
+        name: " Members",
         description: "Total members in the server",
         getCount: (guild) => guild.memberCount.toString(),
       },
       bots: {
-        name: "🤖 Bots",
+        name: " Bots",
         description: "Total bot accounts in the server",
         getCount: (guild) =>
           guild.members.cache.filter((m) => m.user.bot).size.toString(),
       },
       members_only: {
-        name: "👤 Humans",
+        name: " Humans",
         description: "Total human members (non-bots)",
         getCount: (guild) =>
           guild.members.cache.filter((m) => !m.user.bot).size.toString(),
@@ -443,9 +443,9 @@ export const botConfig = {
     welcome: true,
 
     // Community engagement systems.
-    tickets: true,
+    tickets: false,
     giveaways: true,
-    birthday: true,
+    birthday: false,
     counter: true,
 
     // Security and self-service systems.
